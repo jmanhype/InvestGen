@@ -1,1 +1,8 @@
 The AI-Driven Financial Advisor System is an advanced platform designed to provide personalized financial advice, market analysis, and visual data representations to users. Leveraging the power of artificial intelligence and natural language processing, this system aims to revolutionize how individuals interact with financial information and make informed decisions about their financial future.
+
+
+I created a postgres db in order to store my data if you create one like this and use this details you can get the flow running
+you will also need a FMP api key 356fxFyqX3bRRFwzyLbydGXYeUbcRonY
+
+
+postgresql+psycopg2://langchain:langchain@localhost:6024/langchain
