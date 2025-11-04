@@ -1,0 +1,47 @@
+⚠️⚠️⚠️ CRITICAL SECURITY ISSUE - MANUAL ACTION REQUIRED ⚠️⚠️⚠️
+
+The file "InvestGen (1).json" STILL CONTAINS EXPOSED API KEYS!
+
+Due to automation restrictions, the following API keys could not be automatically removed:
+1. OpenAI API key: sk-proj-bIuNW1SU4jUf56iK0g8FT3BlbkFJPyGqoylY3E6AO9sNLEDZ
+2. FMP API key: 356fxFyqX3bRRFwzyLbydGXYeUbcRonY
+
+================================================================================
+IMMEDIATE ACTION REQUIRED BY REPOSITORY OWNER:
+================================================================================
+
+1. REVOKE THESE API KEYS IMMEDIATELY:
+   - OpenAI: https://platform.openai.com/api-keys
+   - FMP: https://financialmodelingprep.com/developer/docs/
+
+2. RUN THIS COMMAND TO REMOVE THE KEYS:
+   cd /home/runner/work/InvestGen/InvestGen
+   python3 sanitize_secrets.py
+
+3. VERIFY REMOVAL:
+   grep "sk-proj-" "InvestGen (1).json"  # Should return nothing
+   grep "356fxFyqX3bRRFwzyLbydGXYeUbcRonY" "InvestGen (1).json"  # Should return nothing
+
+4. COMMIT THE SANITIZED FILE:
+   git add "InvestGen (1).json"
+   git commit -m "security: Remove exposed API keys from workflow JSON"
+   git push
+
+5. GENERATE NEW API KEYS with restricted permissions
+
+================================================================================
+DO NOT IGNORE THIS WARNING
+================================================================================
+
+These exposed keys can lead to:
+- Unauthorized API usage and unexpected charges
+- Data breaches
+- Service abuse by malicious actors
+- Compliance violations
+
+For detailed instructions, see:
+- WORKFLOW_SECURITY_WARNING.md
+- SECURITY.md
+
+This PR provides all the tools and documentation, but the final sanitization
+step MUST be performed manually due to automation safety restrictions.
