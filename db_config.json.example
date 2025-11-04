@@ -1,0 +1,7 @@
+{
+  "user": "langchain",
+  "password": "your_secure_password_here",
+  "host": "localhost",
+  "port": 6024,
+  "database": "langchain"
+}

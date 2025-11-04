@@ -1,8 +1,22 @@
+⚠️ THIS FILE IS DEPRECATED - SEE README.md FOR CURRENT DOCUMENTATION
+
 The AI-Driven Financial Advisor System is an advanced platform designed to provide personalized financial advice, market analysis, and visual data representations to users. Leveraging the power of artificial intelligence and natural language processing, this system aims to revolutionize how individuals interact with financial information and make informed decisions about their financial future.
 
+## Setup Instructions
 
-I created a postgres db in order to store my data if you create one like this and use this details you can get the flow running
-you will also need a FMP api key 356fxFyqX3bRRFwzyLbydGXYeUbcRonY
+1. Create a PostgreSQL database (example configuration):
+   - Database: langchain
+   - User: langchain
+   - Port: 6024
+   - Connection string format: postgresql+psycopg2://user:password@host:port/database
 
+2. Get API keys:
+   - Financial Modeling Prep API key from: https://financialmodelingprep.com/developer/docs/
+   - OpenAI API key from: https://platform.openai.com/api-keys
 
-postgresql+psycopg2://langchain:langchain@localhost:6024/langchain
+3. Configure your credentials:
+   - Copy .env.example to .env
+   - Add your actual API keys and database credentials
+   - NEVER commit .env or API keys to version control!
+
+For detailed setup instructions, see README.md
